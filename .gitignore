@@ -1,1 +1,17 @@
+# Git ignore file for wine project
 /virtual
+/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.csv
+!test_batch.csv
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.ipynb_checkpoints
