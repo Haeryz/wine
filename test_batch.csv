@@ -1,0 +1,6 @@
+volatile_acidity,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,pH,sulphates,alcohol,type_white
+0.7,0.08,15,110,0.9978,3.2,0.6,10.5,1
+0.5,0.05,20,80,0.9950,3.3,0.7,11.0,0
+0.4,0.06,25,90,0.9940,3.1,0.8,12.0,1
+0.3,0.04,30,100,0.9930,3.0,0.5,12.5,1
+0.6,0.07,10,50,0.9960,3.2,0.9,10.0,0
