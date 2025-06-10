@@ -1,6 +1,6 @@
 # Wine Quality Prediction API
 
-This project provides a multi-interface API for predicting wine quality using a machine learning model. The API is available through three different interfaces: REST API with FastAPI, REST API with Flask, and GraphQL.
+This project provides a multi-interface API for predicting wine quality using a machine learning model. The API is available through three different interfaces: REST API with FastAPI, REST API with Flask, and GraphQL. It also includes frontend interfaces in Next.js and Streamlit.
 
 ## Features
 
@@ -9,7 +9,9 @@ This project provides a multi-interface API for predicting wine quality using a 
 - **Batch Prediction**: Upload CSV files with multiple wine samples for batch processing
 - **Model Information**: Get information about the model used for predictions
 - **Regression Analysis**: Comprehensive analysis of prediction results with visual reports
-- **Frontend Integration**: Detailed guide for NextJS integration (see [FRONTEND_INTEGRATION.md](FRONTEND_INTEGRATION.md))
+- **Frontend Integration**: 
+  - Next.js frontend (see [FRONTEND_INTEGRATION.md](FRONTEND_INTEGRATION.md))
+  - Streamlit dashboard for data visualization and prediction
 
 ## Requirements
 
@@ -45,6 +47,27 @@ python main.py
 ```
 
 The server will start and listen on http://127.0.0.1:8000 by default.
+
+## Running the Streamlit Dashboard
+
+```powershell
+# Activate virtual environment (if not already activated)
+.\virtual\Scripts\Activate.ps1
+
+# Install Streamlit requirements
+pip install -r streamlit_requirements.txt
+
+# Run the Streamlit dashboard
+streamlit run streamlit_dashboard.py
+```
+
+Or simply run the provided PowerShell script:
+
+```powershell
+.\run_streamlit.ps1
+```
+
+The Streamlit dashboard will be available at http://localhost:8501 by default.
 
 ## API Documentation
 
