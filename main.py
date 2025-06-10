@@ -6,6 +6,7 @@ import pandas as pd
 from flask import Flask, request, jsonify, send_file
 from fastapi import FastAPI, Depends, UploadFile, File, Response
 from fastapi.middleware.wsgi import WSGIMiddleware
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 from typing import Dict, List, Any, Optional
@@ -31,6 +32,15 @@ fastapi_app = FastAPI(
     title="Wine Quality Prediction API",
     description="API for predicting wine quality using a machine learning model",
     version="1.0.0"
+)
+
+# Add CORS middleware to allow frontend requests
+fastapi_app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Pydantic model for input validation
